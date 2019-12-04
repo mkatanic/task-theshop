@@ -44,6 +44,9 @@
   <ItemGroup>
     <Compile Include="Article.cs" />
     <Compile Include="DatabaseDriver.cs" />
+    <Compile Include="IDatabaseDriver.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="ISupplier.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

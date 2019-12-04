@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TheShop
 {
     //in memory implementation
-    public class DatabaseDriver
+    public class DatabaseDriver : IDatabaseDriver
     {
         private List<Article> _articles = new List<Article>();
 

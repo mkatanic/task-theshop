@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheShop
 {
-    public class Supplier1
+    public class Supplier1 : ISupplier
     {
         public bool ArticleInInventory(int id)
         {
@@ -24,7 +24,7 @@ namespace TheShop
         }
     }
 
-    public class Supplier2
+    public class Supplier2 : ISupplier
     {
         public bool ArticleInInventory(int id)
         {
@@ -42,7 +42,7 @@ namespace TheShop
         }
     }
 
-    public class Supplier3
+    public class Supplier3 : ISupplier
     {
         public bool ArticleInInventory(int id)
         {
