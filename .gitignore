@@ -1,2 +1,5 @@
 # Build directories
 TheShop/obj/
+TheShop/bin/
+# Visual Studio files
+.vs/
