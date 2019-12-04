@@ -6,7 +6,7 @@ namespace TheShop
 	{
 		private static void Main(string[] args)
 		{
-			var shopService = new ShopService();
+            var shopService = ShopService.CreateService();
 
 			try
 			{

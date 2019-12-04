@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheShop
 {
-    interface IDatabaseDriver
+    public interface IDatabaseDriver
     {
         Article GetById(int id);
 

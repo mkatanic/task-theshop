@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheShop
 {
-    interface ISupplier
+    public interface ISupplier
     {
         bool ArticleInInventory(int id);
 

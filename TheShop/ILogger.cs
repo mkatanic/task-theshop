@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheShop
 {
-    interface ILogger
+    public interface ILogger
     {
         void Info(string message);
 

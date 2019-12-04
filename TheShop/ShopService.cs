@@ -13,14 +13,21 @@ namespace TheShop
 		private ISupplier Supplier2;
 		private ISupplier Supplier3;
 		
-		public ShopService()
+		public ShopService(IDatabaseDriver databaseDriver, ILogger logger,
+            ISupplier supplier1, ISupplier supplier2, ISupplier supplier3)
 		{
-			DatabaseDriver = new DatabaseDriver();
-			logger = new Logger();
-			Supplier1 = new Supplier1();
-			Supplier2 = new Supplier2();
-			Supplier3 = new Supplier3();
+			DatabaseDriver = databaseDriver;
+			this.logger = logger;
+			Supplier1 = supplier1;
+			Supplier2 = supplier2;
+			Supplier3 = supplier3;
 		}
+
+        public static ShopService CreateService()
+        {
+            return new ShopService(new DatabaseDriver(), new Logger(),
+                new Supplier1(), new Supplier2(), new Supplier3());
+        }
 
 		public void OrderAndSellArticle(int id, int maxExpectedPrice, int buyerId)
 		{
