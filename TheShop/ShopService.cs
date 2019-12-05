@@ -4,19 +4,19 @@ using System.Linq;
 
 namespace TheShop
 {
-	public class ShopService
-	{
-		private IDatabaseDriver databaseDriver;
-		private ILogger logger;
+    public class ShopService
+    {
+        private IDatabaseDriver databaseDriver;
+        private ILogger logger;
 
         private ISupplier[] suppliers;
-		
-		public ShopService(IDatabaseDriver databaseDriver, ILogger logger, ISupplier[] suppliers)
-		{
-			this.databaseDriver = databaseDriver;
-			this.logger = logger;
+        
+        public ShopService(IDatabaseDriver databaseDriver, ILogger logger, ISupplier[] suppliers)
+        {
+            this.databaseDriver = databaseDriver;
+            this.logger = logger;
             this.suppliers = suppliers;
-		}
+        }
 
         public static ShopService CreateService()
         {
@@ -73,15 +73,15 @@ namespace TheShop
             }
         }
 
-		public void OrderAndSellArticle(int id, int maxExpectedPrice, int buyerId)
-		{
+        public void OrderAndSellArticle(int id, int maxExpectedPrice, int buyerId)
+        {
             Article article = OrderArticle(id, maxExpectedPrice);
             SellArticle(id, article, buyerId);
-		}
+        }
 
-		public Article GetById(int id)
-		{
-			return databaseDriver.GetById(id);
-		}
-	}
+        public Article GetById(int id)
+        {
+            return databaseDriver.GetById(id);
+        }
+    }
 }
